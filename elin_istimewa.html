@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>15 Hal Istimewa Tentang Elin</title>
+  <style>
+    body {
+      background: #fff0f5;
+      font-family: 'Comic Sans MS', sans-serif;
+      color: #333;
+      padding: 30px;
+      overflow-x: hidden;
+      position: relative;
+    }
+    h1 {
+      color: #ff69b4;
+      text-align: center;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li::before {
+      content: "💖 ";
+    }
+    .box {
+      background: #ffe4ec;
+      padding: 20px;
+      border-radius: 20px;
+      max-width: 500px;
+      margin: 20px auto;
+      box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+      position: relative;
+      z-index: 2;
+    }
+    .kekurangan li::before {
+      content: "❌ ";
+    }
+
+    .heart {
+      position: absolute;
+      top: -50px;
+      font-size: 24px;
+      animation: fall 5s linear infinite;
+      color: #ff69b4;
+      opacity: 0.8;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Falling Hearts -->
+  <script>
+    for (let i = 0; i < 30; i++) {
+      let heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerHTML = "💗";
+      let left = Math.random();
+      if (left > 0.4 && left < 0.6) left += 0.3;
+      heart.style.left = left * 100 + "vw";
+      heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+      heart.style.fontSize = (Math.random() * 20 + 20) + "px";
+      document.body.appendChild(heart);
+    }
+  </script>
+
+  <!-- Content Box -->
+  <div class="box">
+    <h1>15 Hal yang membuat kamu istimewa banget</h1>
+    <ul>
+      <li>Cantik</li>
+      <li>Sabar Banget</li>
+      <li>Setia 🥰</li>
+      <li>Penyayang</li>
+      <li>Gak Gampang Nyerah</li>
+      <li>Engga Egois</li>
+      <li>Peduli sama Hal Kecil</li>
+      <li>Supportif</li>
+      <li>Peduli banget ❤️</li>
+      <li>Ngambekny Imut Jd sngt suka 😊</li>
+      <li>Ketawany Yang Mengembalikan mood ku 🥰🥰</li>
+      <li>Baik Pake Bangettttttt</li>
+      <li>Rambutnya Indah Banget Mw style ap aja juga indah bgt</li>
+      <li>Kalau lagi Happy bener bener Happy</li>
+      <li>Simple 🤗</li>
+    </ul>
+
+    <h1>Kekurangannya?</h1>
+    <ul class="kekurangan">
+      <li>Gx ad</li>
+      <li>Gx ad</li>
+      <li>Gx ad</li>
+      <li>Gx ad</li>
+      <li>Gx ad</li>
+    </ul>
+  </div>
+</body>
+</html>
